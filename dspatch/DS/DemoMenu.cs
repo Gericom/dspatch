@@ -14,7 +14,7 @@ namespace dspatch.DS
         {
             MemoryStream m = new MemoryStream();
             EndianBinaryWriter er = new EndianBinaryWriter(m);
-            er.Write((byte)entries.Length);
+            er.Write((byte)entries.Count);
             er.Write((byte)0);
             er.Write((byte)0);
             er.Write((byte)0);
@@ -25,7 +25,7 @@ namespace dspatch.DS
             er.Close();
             return result;
         }
-        public DemoMenuEntry[] entries;
+        public List<DemoMenuEntry> entries = new List<DemoMenuEntry>();
         public class DemoMenuEntry
         {
             private string createString(string text, int length, bool nullTerminated = true)

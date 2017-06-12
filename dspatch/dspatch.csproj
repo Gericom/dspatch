@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DownloadStationPatcher.cs" />
     <Compile Include="DS\DemoMenu.cs" />
     <Compile Include="IO\IOUtil.cs" />
     <Compile Include="Nitro\ARM9.cs" />
